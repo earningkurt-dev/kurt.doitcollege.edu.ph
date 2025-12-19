@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  (function(){
+    emailjs.init("3URhTngc-axHSPcb9"); 
+  })();
+
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      "service_owwj9hq",  
+      "template_51olxbi", 
+      this
+    )
+    .then(() => {
+      status.innerHTML = "✅ Message sent successfully!";
+      status.style.color = "#38bdf8";
+      form.reset();
+    }, (error) => {
+      status.innerHTML = "❌ Failed to send message. Try again.";
+      status.style.color = "red";
+    });
+  });
+</script>
+
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <h2 class="logo">Kurt-dev</h2>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <p class="hello">Hello, It's Me</p>
+      <h1>Kurt Ernest J. Syting</h1>
+      <h3>And I am a <span>IT Student</span></h3>
+      <h3><span>Front-end-Developer</span></h3>
+
+      <div class="socials">
+        <a href="https://web.facebook.com/kurternest.syting.7" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/kurtsy_1/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/earningkurt-dev" target="_blank"><i class="fab fa-github"></i></a>
+        
+      </div>
+      <button class="btn">More About Me</button>
+    </div>
+
+    <!-- Avatar -->
+    <div class="hero-img">
+      <div class="glow">
+        <img src="image/kurty.jpg" alt="avatar">
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
