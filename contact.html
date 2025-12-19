@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <h2 class="logo">Kurt-dev</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+<section class="contact" id="contact">
+  <div class="contact-container">
+
+    <div class="contact-header">
+      <p class="section-subtitle">Get In Touch</p>
+      <h2>Contact <span>Me</span></h2>
+      <p class="contact-desc">
+        Have a question, project, or need assistance?  
+        Feel free to reach out — I’m here to help.
+      </p>
+    </div>
+
+    <div class="contact-wrapper">
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+
+        <div class="info-box">
+          <i class="fas fa-headset"></i>
+          <h3>Customer Service</h3>
+          <p>Available for inquiries and support</p>
+        </div>
+
+        <div class="info-box">
+          <i class="fas fa-envelope"></i>
+          <h4>Email</h4>
+          <a href="https://mail.google.com/mail/u/2/#inbox" target="_blank">Email:earningkurt@gmail.com</a>
+        </div>
+
+        <div class="info-box">
+          <i class="fas fa-phone"></i>
+          <h4>Phone</h4>
+          <p>+63 954 164 5676</p>
+        </div>
+
+        <div class="info-box">
+          <i class="fas fa-clock"></i>
+          <h4>Support Hours</h4>
+          <p>Mon – Fri | 9:00 AM – 6:00 PM</p>
+        </div>
+
+      </div>
+
+      <!-- Contact Form -->
+      <form class="contact-form" id="contact-form">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <input type="text" name="subject" placeholder="Subject">
+  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+  <button type="submit" class="btn">Send Message</button>
+</form>
+
+<p id="form-status"></p>
+
+    </div>
+  </div>
+</section>
+
+
+</body>
+</html>
